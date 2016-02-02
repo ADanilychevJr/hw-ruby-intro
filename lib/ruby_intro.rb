@@ -17,12 +17,13 @@ def max_2_sum arr
   if arr.length == 1
     return arr[0]
   end
-  arr.reverse.first(2).sum
+  arr = arr.sort
+  return arr[-1] + arr[-2]
 end
 
 def sum_to_n? arr, n
   if not arr.any? and n == 0
-    return true
+    return false
   end
   arr.sort!
   new_arr = arr.combination(2).detect { |x,y| x + y == n}

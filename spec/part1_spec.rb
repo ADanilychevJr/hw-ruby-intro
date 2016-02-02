@@ -1,7 +1,7 @@
 require 'ruby_intro.rb'
 
 describe 'Ruby intro part 1' do
-=begin
+
   describe "#sum" do
     it "should be defined" do
       expect { sum([1,3,4]) }.not_to raise_error
@@ -38,7 +38,7 @@ describe 'Ruby intro part 1' do
       expect(max_2_sum([3])).to eq(3)
     end
   end
-=end
+
   describe "#sum_to_n" do
     it "should be defined" do
       expect { sum_to_n?([1,2,3],4) }.not_to raise_error
@@ -65,8 +65,8 @@ describe 'Ruby intro part 1' do
       expect(sum_to_n?([-1], -1)).to be false
       expect(sum_to_n?([-3], 0)).to be false
     end
-    it "returns true if the empty array sums to zero [5 points]" , points: 5 do
-      expect(sum_to_n?([], 0)).to be true
+    it "returns false for an empty array [5 points]" , points: 5 do
+      expect(sum_to_n?([], 0)).to be false
       expect(sum_to_n?([], 7)).to be false
     end
   end
